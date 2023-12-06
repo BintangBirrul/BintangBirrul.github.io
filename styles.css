@@ -1,0 +1,638 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Prata&family=Press+Start+2P&family=Quicksand:wght@400;500;700&family=Satisfy&display=swap');
+
+.body{
+    font: Quicksend;
+}
+
+header.navbar-container {
+    max-width: 1200px;
+    width: 100%;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: none;
+    padding-block: 1rem;
+    font-family: 'Quicksand', sans-serif;
+  }
+   
+  header.navbar-container .logo img {
+    width: 150px;
+  }
+   
+  header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+  }
+   
+  header.navbar-container .nav-list li {
+    list-style-type: none;
+  }
+   
+  header.navbar-container .nav-list li a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+  }
+   
+  header.navbar-container .nav-list li:hover a {
+    background-color: burlywood;
+    color: white;
+  }
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: cornsilkink;
+    /* Warna latar belakang kontainer menu */
+    min-height: 100%;
+}
+
+
+.menu-item:hover {
+    transform: scale(1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+
+}
+
+.menu-item:hover::after {
+    position: absolute;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    width: 94%;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Mengatur tumpukan z-index agar pseudo-elemen ditampilkan di atas gambar */
+}
+
+.menu-item p {
+    margin: 10px 0; /* Mengatur margin atas dan bawah untuk memberi ruang */
+}
+
+
+.order-button {
+
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: rgba(128, 128, 128, 0.514);
+}
+
+/* Daftar pesanan */
+.order-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+/* Button Checkout */
+.checkout-button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.checkout-button:hover {
+    background-color: rgba(128, 128, 128, 0.514);
+}
+
+.payment-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-image {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.item-name {
+    flex: 1;
+}
+
+.item-price,
+.item-quantity {
+    margin: 0 10px;
+}
+
+.add-button,
+.remove-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.order-button,
+.checkout-button,
+.add-button,
+.remove-button {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.order-button:hover,
+.checkout-button:hover,
+.add-button:hover,
+.remove-button:hover {
+    background-color: rgba(128, 128, 128, 0.514);
+    color: white;
+}
+
+/* Checkbox yang lebih menarik */
+.sugar input[type="checkbox"],
+.iced input[type="checkbox"] {
+    display: none; /* Sembunyikan checkbox asli */
+    
+}
+
+/* Checkbox yang lebih kecil */
+.sugar label,
+.iced label {
+    display: inline-block;
+    padding: 3px 8px; /* Ubah ukuran padding */
+    font-size: 14px; /* Ubah ukuran font */
+    margin-right: 10px;
+    margin-top: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px; /* Ubah ukuran border radius */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Checkbox yang dicentang akan mengubah warna latar belakang label */
+.sugar input[type="checkbox"]:checked + label,
+.iced input[type="checkbox"]:checked + label {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+/* Hover efek pada label */
+.sugar label:hover,
+.iced label:hover {
+    background-color: #ddd;
+}
+
+/* CSS untuk styling elemen item */
+.item-name {
+    font-weight: bold;
+}
+
+.item-details {
+    margin-top: 5px;
+}
+
+.item-quantity, .sugar-type, .iced-type {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* CSS untuk styling tombol */
+.remove-button, .add-button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.remove-button:hover, .add-button:hover {
+    background-color: #ff4500;
+}
+
+/* CSS untuk pesan "Transaksi Loading" */
+.loading-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* CSS untuk pesan "Success" */
+.success-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+    margin-top: 10px;
+}
+
+/* CSS untuk pesan "Failed" */
+.failed-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+}
+
+.footer {
+    background-color: #f7f7f7;
+    padding: 20px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-left {
+    width: 50%;
+  }
+  
+  .footer-right {
+    width: 50%;
+  }
+  
+  .footer h3 {
+    margin-bottom: 10px;
+  }
+  
+  .footer p {
+    margin: 5px 0;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+    color: #777;
+  }
+
+  .tengah {
+    text-align: center;
+    width: 100%;
+ }
+ 
+ .sosmed-list {
+     width: 100%;
+     position: relative;
+     display: flex;
+     flex-wrap: wrap;
+ }
+ 
+ .nama-sosmed {
+     width: 20%;
+     margin: 0 auto;
+ }
+ 
+ .nama-sosmed img {
+     width: 80%;
+ }
+ 
+ #contact {
+    padding-top: 20px;
+     background: #dedede;
+     padding:50px 0px 50px 0px;
+ }
+ 
+ .footer {
+     width: 100%;
+     position: relative;
+     display: flex;
+     flex-wrap: wrap;
+     margin: auto;
+ }
+ 
+ .footer-section {
+     width: 20%;
+     margin: 0 auto;
+ 
+ }
+ 
+ h3 {
+     font-family: "Candara" ;
+     font-weight: 800;
+     font-size: 30px;
+     margin-bottom: 20px;
+     color:#eb8b0d;
+     width: 100%;
+     list-style: 50px;
+ }
+ 
+ #copyright {
+     text-align: center;
+     width: 100%;
+     padding: 10px 0px 10px 0px;
+     margin-top: 20px;
+ }
+
+ /* Atur logo dan tombol navigasi */
+header.navbar-container .logo,
+header.navbar-container .order-button {
+    position: relative;
+    z-index: 2;
+}
+
+/* Atur item menu */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: cornsilkink;
+    min-height: 100%;
+    position: relative;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    font-family: Quicksand;
+    border-radius: 10px;
+    position: relative;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 480px;
+    width: calc(25% - 20px);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    z-index: 1; /* Atur z-index lebih tinggi daripada item menu */
+}
+
+/* Media query untuk layar berukuran kecil */
+@media (max-width: 768px) {
+  .navbar-container {
+      padding-top: 10px;
+  }
+
+  .navbar-container .nav-list ul .logo img{
+    align-items: center;
+    width: 80px;
+}
+
+  .menu-item {
+      width: calc(50% - 20px);
+      margin-top: 40px; /* Tambahkan margin ke atas untuk menggeser menu ke bawah */
+  }
+}
+
+
+/* Media query untuk layar sangat kecil (di bawah 480px) */
+@media (max-width: 480px) {
+    .navbar-container .logo img {
+        width: 60px;
+    }
+    
+    .menu-item {
+        width: 100%;
+    }
+}
+
+/* The footer is fixed to the bottom of the page */
+
+footer{
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed {
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+}
